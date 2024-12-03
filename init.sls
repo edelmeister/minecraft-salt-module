@@ -9,24 +9,24 @@ minecraft:
 /home/minecraft/server.jar:
   file.managed:
     - source:
-      - salt://minecraft-server/server.jar
+      - salt://minecraft-salt-module/server.jar
 /home/minecraft/eula.txt:
   file.managed:
     - source:
-      - salt://minecraft-server/eula.txt
+      - salt://minecraft-salt-module/eula.txt
 /home/minecraft/server.properties:
   file.managed:
     - source:
-      - salt://minecraft-server/server.properties
+      - salt://minecraft-salt-module/server.properties
 /etc/systemd/system/minecraft.service:
   file.managed:
     - source:
-      - salt://minecraft-server/minecraft.service
+      - salt://minecraft-salt-module/minecraft.service
 build-essential:
   pkg.installed
 /usr/local/src/mcrcon:
   file.recurse:
-    - source: salt://minecraft-server/mcrcon
+    - source: salt://minecraft-salt-module/mcrcon
 make:
   cmd.run:
     - cwd: /usr/local/src/mcrcon
