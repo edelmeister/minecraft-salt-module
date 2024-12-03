@@ -1,0 +1,20 @@
+[Unit]
+Description=Minecraft Server
+After=network.target
+
+[Service]
+User=minecraft
+Group=minecraft
+WorkingDirectory=/home/minecraft
+ExecStart=/usr/bin/java -Xmx1024M -Xms1024M -jar /home/minecraft/server.jar nogui
+ExecStop=/usr/local/bin/mcrcon -p salainen -w 5 save-all "say Server is restarting!" stop
+Restart=always
+RestartSec=10
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=MinecraftServer
+TimeoutStopSec=60
+SuccessExitStatus=0 143
+
+[Install]
+WantedBy=multi-user.target
