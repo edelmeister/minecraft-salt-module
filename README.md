@@ -20,6 +20,8 @@ For instruction on sending Minecraft Server's console commands, go to [mcrcon's 
 
 You can either SSH into your minion running the server and run ``mcrcon`` there, or you can install mcrcon to your master.
 
+You can see the log of ``minecraft.service`` with ``journalctl -u minecraft``.
+
 For general use of a Minecraft Server and how to setup port-forwarding etc. see the [Minecraft Wiki server setup tutorial](https://minecraft.wiki/w/Tutorial:Setting_up_a_server).
 
 ## Quick Installation
