@@ -85,13 +85,19 @@ sudo salt-call --local state.apply minecraft-salt-module
 Install ``build-essential``:
 
 ```bash
-sudo apt install build-essential
+sudo apt install build-essential -y
 ```
 
 And run:
 
 ```bash
 sudo git clone https://github.com/Tiiffi/mcrcon.git /usr/local/src/mcrcon && cd /usr/local/src/mcrcon && sudo make && sudo make install
+```
+
+Then connect you can connect ``mcrcon`` to your server with for example:
+
+```bash
+mcrcon -H 192.168.11.11 -P 25575 -p password
 ```
 
 ### 6. Connect to your Minecraft Server
