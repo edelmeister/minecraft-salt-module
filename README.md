@@ -94,7 +94,7 @@ And run:
 sudo git clone https://github.com/Tiiffi/mcrcon.git /usr/local/src/mcrcon && cd /usr/local/src/mcrcon && sudo make && sudo make install
 ```
 
-Then connect you can connect with ``mcrcon`` to your server. Example command:
+Then you can connect with ``mcrcon`` to your server. Example command:
 
 ```bash
 mcrcon -H 192.168.11.11 -P 25575 -p password
